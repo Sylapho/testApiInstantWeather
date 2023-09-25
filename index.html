@@ -5,14 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface Météo</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
+    <header>
+        <h1>Instant Weather</h1>
+    </header>
     <div class="container">
-        <input type="number" id="codePostal" name="tempsTimerPause" />
+        <label for="codePostal">Entrez votre code postal :</label>
+        <input type="text" id="codePostal" name="codePostal" placeholder="Entrez un code postal..." />
+        <br>
+        <label for="communeSelect" id="labelCommuneSelect">Choississez votre commune :</label>
         <select id="communeSelect"></select>
-        <p id="test"></p>
+        <br>
+        <button id="validation">Valider</button>
+        <p id="nomVille"></p>
+
+        <p id="tempMax"></p>
+
+    
+        <p id="tempMin"></p>
+
+        
+        <p id="probaPluie"></p>
+
+        
+        <p id="heureSoleil"></p>
+
     </div>
-    <script src="scripts/app.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
