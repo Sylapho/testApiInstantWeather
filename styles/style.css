@@ -26,3 +26,15 @@ select {
 label {
     background: none;
 }
+
+
+.option{
+    border-style: solid;
+    display: block;
+
+}
+
+.check{
+    
+    
+}

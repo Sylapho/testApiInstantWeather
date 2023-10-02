@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface Météo</title>
     <link rel="stylesheet" href="styles/style.css">
+
 </head>
 
 <body>
@@ -13,28 +14,58 @@
         <h1>Instant Weather</h1>
     </header>
     <div class="container">
+        <div class="option">
+            <legend>Informations supplémentaires:</legend>
+
+                <div>
+                    <input class="check" type="checkbox" id="op1" name="op1"  />
+                    <label for="op1">Latitude décimale </label>
+                </div>
+
+                <div>
+                    <input class="check" type="checkbox" id="op2" name="op2" />
+                    <label for="op2">Longitude décimale </label>
+                </div>
+
+                <div>
+                    <input class="check" type="checkbox" id="op3" name="op3" />
+                    <label for="op3">Cumul de pluie sur la journée </label>
+                </div>
+
+                <div>
+                    <input class="check" type="checkbox" id="op4" name="op4" />
+                    <label for="op4">Vent moyen en km/h</label>
+                </div>
+
+                <div>
+                    <input class="check" type="checkbox" id="op5" name="op5" />
+                    <label for="op5">Direction du vent</label>
+                </div>
+
+        </div>
+
+
         <label for="codePostal">Entrez votre code postal :</label>
         <input type="text" id="codePostal" name="codePostal" placeholder="Entrez un code postal..." />
+        <br>
+        <label for="nbJour">Nombre de jour de prévision :</label>
+        <input type="number" id="nbJours" value="1" name="nbJours" min="1" max="7" />
         <br>
         <label for="communeSelect" id="labelCommuneSelect">Choississez votre commune :</label>
         <select id="communeSelect"></select>
         <br>
         <button id="validation">Valider</button>
         <p id="nomVille"></p>
-
-        <p id="tempMax"></p>
-
-    
-        <p id="tempMin"></p>
-
-        
-        <p id="probaPluie"></p>
-
-        
-        <p id="heureSoleil"></p>
+        <section id="weatherSection">
+            <div id="meteo">
+                <i id="imageMeteo"></i>
+            </div>
+        </section>
 
     </div>
     <script src="scripts/script.js"></script>
+    <script src="scripts/weatherCard.js"></script>
+    <script src="https://kit.fontawesome.com/2600071026.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
